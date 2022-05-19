@@ -1,7 +1,7 @@
 from django.utils.translation import gettext_lazy as _
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
-from django.db.models import CharField, TextField, PositiveIntegerField, ForeignKey, OneToOneField
+from django.db.models import CharField, TextField, PositiveIntegerField
 
 class NonStrippingCharField(CharField):
     """A TextField that does not strip whitespace at the beginning/end of
