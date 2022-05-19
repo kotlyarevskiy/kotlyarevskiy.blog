@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-16 12:46+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: .\_templates\_base.html:40 .\kotlyarevskiy\views.py:14
+#: .\kotlyarevskiy\views.py:15
+msgid "About me"
+msgstr "Про мене"
+
+#: .\_templates\_base.html:48
+msgid "Projects"
+msgstr "Проекти"
+
+#: .\_templates\_base.html:72 .\kotlyarevskiy\views.py:20
+#: .\kotlyarevskiy\views.py:21
+msgid "Contacts"
+msgstr "Контакти"
+
+#: .\_templates\_base.html:98
+msgid "not authorized"
+msgstr "не авторизовано"
+
+#: .\_templates\_base.html:104 .\_templates\auth\user_page.html:27
+#: .\app_auth\views.py:43 .\app_auth\views.py:44
+msgid "User page"
+msgstr "Сторінка користувача"
+
+#: .\_templates\_base.html:107
+msgid "Logout"
+msgstr "Вихід"
+
+#: .\_templates\_base.html:111 .\_templates\auth\registration.html:50
+#: .\app_auth\views.py:70 .\app_auth\views.py:71
+msgid "Login"
+msgstr "Вхід"
+
+#: .\_templates\_base.html:114 .\app_auth\views.py:110 .\app_auth\views.py:111
+msgid "Registration"
+msgstr "Реєстрація"
+
+#: .\_templates\_base.html:145 .\_templates\_base.html:147
+msgid "Search"
+msgstr "Шукати"
+
+#: .\_templates\auth\login.html:28
+msgid "Please sign in"
+msgstr "Будь ласка, виконайте вхід"
+
+#: .\_templates\auth\login.html:47
+msgid "Sign in"
+msgstr "Увійти"
+
+#: .\_templates\auth\login.html:48
+msgid "Don`t have an account"
+msgstr "Не маєте облікового запису"
+
+#: .\_templates\auth\login.html:48
+msgid "Register"
+msgstr "Реєстрація"
+
+#: .\_templates\auth\registration.html:30
+msgid "Registration form"
+msgstr "Форма реєстрації"
+
+#: .\_templates\auth\registration.html:49
+msgid "Sign up"
+msgstr "Зареєструвати"
+
+#: .\_templates\auth\registration.html:50
+msgid "Already have an account"
+msgstr "Вже маєте обліковий запис"
+
+#: .\_templates\auth\user_page.html:47
+msgid "user profile:"
+msgstr "профайл користувача:"
+
+#: .\_templates\auth\user_page.html:71
+msgid "user settings:"
+msgstr "користувацькі налаштування:"
+
+#: .\_templates\auth\user_page.html:93
+msgid "Save changes"
+msgstr "Зберегти зміни"
+
+#: .\_templates\weather\index.html:15
+msgid "Submit"
+msgstr "Отримати"
+
+#: .\_templates\weather\index.html:16
+msgid "City"
+msgstr "Місто"
+
+#: .\_templates\weather\index.html:18
+msgid "Select language"
+msgstr "Оберіть мову"
+
+#: .\_templates\weather\index.html:19
+msgid "Bulgarian"
+msgstr "Болгарська"
+
+#: .\_templates\weather\index.html:20
+msgid "Czech"
+msgstr "Чеська"
+
+#: .\_templates\weather\index.html:21 .\kotlyarevskiy\settings.py:113
+msgid "English"
+msgstr "English"
+
+#: .\_templates\weather\index.html:22
+msgid "Finnish"
+msgstr "Фінська"
+
+#: .\_templates\weather\index.html:23
+msgid "Latvian"
+msgstr "Латвійська"
+
+#: .\_templates\weather\index.html:24
+msgid "Lithuanian"
+msgstr "Литовська"
+
+#: .\_templates\weather\index.html:25
+msgid "Polish"
+msgstr "Польська"
+
+#: .\_templates\weather\index.html:26
+msgid "Turkish"
+msgstr "Турецька"
+
+#: .\_templates\weather\index.html:27 .\kotlyarevskiy\settings.py:114
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: .\_templates\weather\index.html:30
+msgid "Select type of units"
+msgstr "Оберіть тип одиниць виміру"
+
+#: .\_templates\weather\index.html:31
+msgid "standard"
+msgstr "стандартна"
+
+#: .\_templates\weather\index.html:32
+msgid "metric"
+msgstr "метрична"
+
+#: .\_templates\weather\index.html:33
+msgid "imperial"
+msgstr "імперська"
+
+#: .\_templates\weather\index.html:71
+msgid "Feels like"
+msgstr "Сприймається, як"
+
+#: .\_templates\weather\index.html:75
+msgid "Wind"
+msgstr "Вітер"
+
+#: .\_templates\weather\index.html:79
+msgid "Humidity"
+msgstr "Вологість"
+
+#: .\_templates\weather\index.html:83
+msgid "Precipitation"
+msgstr "Опади"
+
+#: .\_templates\weather\index.html:87
+msgid "Pressure"
+msgstr "Атм. тиск"
+
+#: .\app_api_credentials\models.py:15 .\app_areas_of_knowledges\models.py:15
+#: .\app_areas_of_knowledges\models.py:34
+msgid "name"
+msgstr "найменування"
+
+#: .\app_api_credentials\models.py:16
+msgid "parameters"
+msgstr "параметри"
+
+#: .\app_api_credentials\models.py:22
+msgid "API credential"
+msgstr "API обліковий реквізит"
+
+#: .\app_api_credentials\models.py:23
+msgid "API credentials"
+msgstr "API облікові дані"
+
+#: .\app_areas_of_knowledges\models.py:16
+msgid "is category"
+msgstr "це категорія"
+
+#: .\app_areas_of_knowledges\models.py:17
+msgid "parent"
+msgstr "власник"
+
+#: .\app_areas_of_knowledges\models.py:29
+msgid "Category or area"
+msgstr "Категорія або область"
+
+#: .\app_areas_of_knowledges\models.py:30 .\app_areas_of_knowledges\views.py:10
+#: .\app_areas_of_knowledges\views.py:11
+msgid "Categories and areas"
+msgstr "Категорії та області"
+
+#: .\app_areas_of_knowledges\models.py:35
+msgid "description"
+msgstr "опис"
+
+#: .\app_areas_of_knowledges\models.py:36
+msgid "level"
+msgstr "рівень"
+
+#: .\app_areas_of_knowledges\models.py:42
+msgid "Level of competence"
+msgstr "Рівень компетентності"
+
+#: .\app_areas_of_knowledges\models.py:43
+msgid "Levels of competence"
+msgstr "Рівні компетентності"
+
+#: .\app_auth\forms.py:17 .\app_auth\forms.py:30 .\app_auth\forms.py:41
+#: .\app_auth\forms.py:51
+msgid "Enter username..."
+msgstr "Введіть ім'я користувача..."
+
+#: .\app_auth\forms.py:18 .\app_auth\forms.py:31
+msgid "Enter password..."
+msgstr "Введіть пароль..."
+
+#: .\app_auth\forms.py:19
+msgid "Confirm password..."
+msgstr "Підтвердьте пароль..."
+
+#: .\app_auth\forms.py:20
+msgid "Enter your email..."
+msgstr "Введіть ваш пароль..."
+
+#: .\app_auth\forms.py:21
+msgid "Enter some parameter..."
+msgstr "Введіть якийсь параметр..."
+
+#: .\app_auth\models.py:17 .\app_auth\models.py:46
+msgid "user"
+msgstr "користувач"
+
+#: .\app_auth\models.py:18
+msgid "email"
+msgstr "email"
+
+#: .\app_auth\models.py:33
+msgid "User profile"
+msgstr "Профайл користувача"
+
+#: .\app_auth\models.py:34
+msgid "User profile data"
+msgstr "Дані профайлу користувача"
+
+#: .\app_auth\models.py:53 .\app_auth\models.py:54
+msgid "User settings"
+msgstr "Користувацькі налаштування"
+
+#: .\app_auth\views.py:37
+msgid "The changes has been saved."
+msgstr "Зміни було збережено."
+
+#: .\app_weather\views.py:38 .\app_weather\views.py:39
+msgid "Weather"
+msgstr "Погода"
+
+#: .\app_weather\views.py:62
+msgid "miles/hour"
+msgstr "миль/год"
+
+#: .\app_weather\views.py:64 .\app_weather\views.py:72
+#: .\app_weather\views.py:80
+msgid "mm"
+msgstr "мм"
+
+#: .\app_weather\views.py:70 .\app_weather\views.py:78
+msgid "meter/sec"
+msgstr "м/сек"
+
+#: .\kotlyarevskiy\views.py:8 .\kotlyarevskiy\views.py:9
+msgid "Main page"
+msgstr "Головна"
+
+#~ msgid "Username"
+#~ msgstr "Ім'я користувача"
+
+#~ msgid "Enter your password"
+#~ msgstr "Введіть ваш пароль"
+
+#~ msgid "Password"
+#~ msgstr "Пароль"

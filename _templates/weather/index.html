@@ -1,0 +1,99 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock title %}
+{% block header %}
+    <h1>{{ header }}</h1>
+{% endblock header %}
+{% block content %}
+<div class="container-xxl px-5">
+	<div class="row">
+		<div class="col p-0">
+			<form action="{% url 'weather' %}">
+				<div class="input-group mb-3">						
+					<button class="btn btn-secondary col-3" type="submit">{% trans 'Submit' %}</button>
+					<input type="text" id="city" name="city" placeholder="{% trans 'City' %}" class="form-control col-3" value="{{search_param.city}}">
+					<select id="lang" name="lang" class="form-select col-3" aria-label="Language" value="{{search_param.lang}}">
+						<option value="" >{% trans 'Select language' %}</option>
+						<option value="bg" {% if search_param.lang == "bg" %} selected {% endif %} >{% trans 'Bulgarian' %}</option>
+						<option value="cz" {% if search_param.lang == "cz" %} selected {% endif %} >{% trans 'Czech' %}</option>
+						<option value="en" {% if search_param.lang == "en" %} selected {% endif %} >{% trans 'English' %}</option>
+						<option value="fi" {% if search_param.lang == "fi" %} selected {% endif %} >{% trans 'Finnish' %}</option>
+						<option value="la" {% if search_param.lang == "la" %} selected {% endif %} >{% trans 'Latvian' %}</option>
+						<option value="lt" {% if search_param.lang == "lt" %} selected {% endif %} >{% trans 'Lithuanian' %}</option>
+						<option value="pl" {% if search_param.lang == "pl" %} selected {% endif %} >{% trans 'Polish' %}</option>
+						<option value="tr" {% if search_param.lang == "tr" %} selected {% endif %} >{% trans 'Turkish' %}</option>
+						<option value="ua" {% if search_param.lang == "ua" %} selected {% endif %} >{% trans 'Ukrainian' %}</option>
+					</select>							
+					<select id="units" name="units" class="form-select col-3" aria-label="Units">
+						<option value="" >{% trans 'Select type of units' %}</option>
+						<option value="standard" {% if search_param.units == "standard" %} selected {% endif %} >{% trans 'standard' %}</option>
+						<option value="metric" {% if search_param.units == "metric" %} selected {% endif %} >{% trans 'metric' %}</option>
+						<option value="imperial" {% if search_param.units == "imperial" %} selected {% endif %} >{% trans 'imperial' %}</option>
+					</select>					
+				</div>
+			</form>
+		</div>
+	</div>			
+	<div class="row bg-secondary">
+		<div class="col">
+			<div class="container">
+				<div class="row">
+					<div class="col-8">
+						<div class="container fs-3 text-white">
+							<div class="row">
+								<div class="col fw-bold">{{ response_param.city_state }}</div>
+							</div>
+							<div class="row">
+								<div class="col">{{ response_param.description }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-4">
+						{% if response_param.icon == None %}
+							<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"  fill-opacity="0.40" class="bi bi-rainbow" viewBox="0 0 16 16">
+								<path d="M8 4.5a7 7 0 0 0-7 7 .5.5 0 0 1-1 0 8 8 0 1 1 16 0 .5.5 0 0 1-1 0 7 7 0 0 0-7-7zm0 2a5 5 0 0 0-5 5 .5.5 0 0 1-1 0 6 6 0 1 1 12 0 .5.5 0 0 1-1 0 5 5 0 0 0-5-5zm0 2a3 3 0 0 0-3 3 .5.5 0 0 1-1 0 4 4 0 1 1 8 0 .5.5 0 0 1-1 0 3 3 0 0 0-3-3zm0 2a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 4 0 .5.5 0 0 1-1 0 1 1 0 0 0-1-1z"/>
+							</svg>
+						{% else %}
+							<img src="http://openweathermap.org/img/wn/{{ response_param.icon }}@2x.png" alt="weather icon">
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row text-start text-secondary">
+		<div class="col-8 text-center fw-bold fs-1">{{ response_param.temperature }}</div>
+		<div class="col-4">
+			<div class="container">
+				<div class="row">
+					<div class="col fw-bold">{% trans 'Feels like' %}:</div>
+					<div class="col">{{ response_param.feels_like }}</div>
+				</div>
+				<div class="row">
+					<div class="col fw-bold">{% trans 'Wind' %}:</div>
+					<div class="col">{{ response_param.wind }}</div>						
+				</div>
+				<div class="row">
+					<div class="col fw-bold">{% trans 'Humidity' %}:</div>
+					<div class="col">{{ response_param.humidity }}</div>						
+				</div>
+				<div class="row">
+					<div class="col fw-bold">{% trans 'Precipitation' %}:</div>
+					<div class="col">{{ response_param.precipitation }}</div>						
+				</div>
+				<div class="row">
+					<div class="col fw-bold">{% trans 'Pressure' %}:</div>
+					<div class="col">{{ response_param.pressure }}</div>						
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="row bg-secondary  text-white">
+		<div class="col-2"><img class="img-fluid m-2" src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" alt="open weather map icon"></div>
+		<div class="col"></div>
+		<div class="col-3 text-end">{{ response_param.date_time }}</div>
+	</div>
+</div>
+{% endblock %}
