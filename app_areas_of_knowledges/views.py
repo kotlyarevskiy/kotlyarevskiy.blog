@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
-import json
 from .models import CategoriesAndAreas
 
 def show_categories_and_areas(request):

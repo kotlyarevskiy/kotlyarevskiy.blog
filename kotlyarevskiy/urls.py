@@ -17,6 +17,7 @@ urlpatterns = [
     path('contacts/', contacts, name="contacts"),
     
     # Projects
+    path('projects/', include('app_projects.urls')),
     path('weather/', include('app_weather.urls')),
     path('categories_and_areas/', include('app_areas_of_knowledges.urls')),  
     
