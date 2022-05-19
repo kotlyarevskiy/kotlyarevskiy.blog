@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'app_api_credentials',
     'app_areas_of_knowledges',
     'app_auth',
+    'app_projects'
 ]
 
 MIDDLEWARE = [
