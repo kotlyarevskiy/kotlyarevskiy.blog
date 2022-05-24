@@ -11,6 +11,8 @@ urlpatterns = [
     
     path('i18n/', include('django.conf.urls.i18n')),
     
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+    
     path('', index, name='index'),
     
     path('about_me/', about_me, name="about_me"),

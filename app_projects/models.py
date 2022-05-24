@@ -14,10 +14,11 @@ class Projects(models.Model):
         ('finished', _('Finished')),
     )
     
-    name = CharField(verbose_name=_('name'), max_length=150, unique=False)
+    name        = CharField(verbose_name=_('name'), max_length=150, unique=False)
+    definition  = CharField(verbose_name=_('definition'), max_length=255, null=True)
     description = TextField(verbose_name=_('description'), null=True, blank=True)
-    status = CharField(verbose_name=_('status'), max_length=25, choices=STATUSES, default=STATUSES[0])
-    level = PositiveIntegerField(verbose_name=_('level'), default=0, blank=False, null=False)
+    status      = CharField(verbose_name=_('status'), max_length=25, choices=STATUSES, default=STATUSES[0])
+    level       = PositiveIntegerField(verbose_name=_('level'), default=0, blank=False, null=False)
     
     
 
@@ -31,3 +32,4 @@ class Projects(models.Model):
         verbose_name = verbose_name=_("Project")
         verbose_name_plural = verbose_name=_("Projects")
         ordering = ['level']
+        

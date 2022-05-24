@@ -3,5 +3,5 @@ from .models import *
 
 @register(Projects)
 class ProjectsTranslationOptions(TranslationOptions):
-    fields = ('name', 'description',)
+    fields = ('name', 'definition', 'description',)
 
