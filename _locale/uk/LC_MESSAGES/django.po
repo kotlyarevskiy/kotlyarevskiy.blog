@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 22:09+0300\n"
+"POT-Creation-Date: 2022-05-25 15:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,8 +27,8 @@ msgid "About me"
 msgstr "Про мене"
 
 #: .\_templates\_base.html:45 .\_templates\_base.html:53
-#: .\app_projects\models.py:30 .\app_projects\views.py:8
-#: .\app_projects\views.py:9
+#: .\app_projects\models.py:33 .\app_projects\views.py:12
+#: .\app_projects\views.py:13
 msgid "Projects"
 msgstr "Проекти"
 
@@ -42,7 +42,7 @@ msgid "not authorized"
 msgstr "не авторизовано"
 
 #: .\_templates\_base.html:109 .\_templates\auth\user_page.html:27
-#: .\app_auth\views.py:43 .\app_auth\views.py:44
+#: .\app_auth\views.py:42 .\app_auth\views.py:43
 msgid "User page"
 msgstr "Сторінка користувача"
 
@@ -51,11 +51,11 @@ msgid "Logout"
 msgstr "Вихід"
 
 #: .\_templates\_base.html:116 .\_templates\auth\registration.html:50
-#: .\app_auth\views.py:70 .\app_auth\views.py:71
+#: .\app_auth\views.py:69 .\app_auth\views.py:70
 msgid "Login"
 msgstr "Вхід"
 
-#: .\_templates\_base.html:119 .\app_auth\views.py:110 .\app_auth\views.py:111
+#: .\_templates\_base.html:119 .\app_auth\views.py:109 .\app_auth\views.py:110
 msgid "Registration"
 msgstr "Реєстрація"
 
@@ -100,8 +100,29 @@ msgid "user settings:"
 msgstr "користувацькі налаштування:"
 
 #: .\_templates\auth\user_page.html:93
+#: .\_templates\projects\project_page.html:98
 msgid "Save changes"
 msgstr "Зберегти зміни"
+
+#: .\_templates\projects\index.html:20
+msgid "Add project"
+msgstr "Додати проект"
+
+#: .\_templates\projects\index.html:45
+msgid "Edit"
+msgstr "Змінити"
+
+#: .\_templates\projects\index.html:54
+msgid "Delete"
+msgstr "Вилучити"
+
+#: .\_templates\projects\project_page.html:29
+msgid "all"
+msgstr "всі"
+
+#: .\_templates\projects\project_page.html:64
+msgid "project details:"
+msgstr "деталі проекту:"
 
 #: .\_templates\weather\index.html:15
 msgid "Submit"
@@ -123,7 +144,7 @@ msgstr "Болгарська"
 msgid "Czech"
 msgstr "Чеська"
 
-#: .\_templates\weather\index.html:21 .\kotlyarevskiy\settings.py:114
+#: .\_templates\weather\index.html:21 .\kotlyarevskiy\settings.py:119
 msgid "English"
 msgstr "English"
 
@@ -147,7 +168,7 @@ msgstr "Польська"
 msgid "Turkish"
 msgstr "Турецька"
 
-#: .\_templates\weather\index.html:27 .\kotlyarevskiy\settings.py:115
+#: .\_templates\weather\index.html:27 .\kotlyarevskiy\settings.py:120
 msgid "Ukrainian"
 msgstr "Українська"
 
@@ -205,7 +226,7 @@ msgid "API credentials"
 msgstr "API облікові дані"
 
 #: .\app_areas_of_knowledges\models.py:16
-#: .\app_areas_of_knowledges\models.py:36 .\app_projects\models.py:18
+#: .\app_areas_of_knowledges\models.py:36 .\app_projects\models.py:19
 msgid "description"
 msgstr "опис"
 
@@ -226,7 +247,7 @@ msgstr "Категорія або область"
 msgid "Categories and areas"
 msgstr "Категорії та області"
 
-#: .\app_areas_of_knowledges\models.py:37
+#: .\app_areas_of_knowledges\models.py:37 .\app_projects\models.py:21
 msgid "level"
 msgstr "рівень"
 
@@ -279,9 +300,25 @@ msgstr "Дані профайлу користувача"
 msgid "User settings"
 msgstr "Користувацькі налаштування"
 
-#: .\app_auth\views.py:37
+#: .\app_auth\views.py:36 .\app_projects\views.py:54
 msgid "The changes has been saved."
 msgstr "Зміни було збережено."
+
+#: .\app_projects\forms.py:38
+msgid "Enter project en name..."
+msgstr "Введіть назву en проекту..."
+
+#: .\app_projects\forms.py:39
+msgid "Enter project uk name..."
+msgstr "Введіть назву uk проекту..."
+
+#: .\app_projects\forms.py:41
+msgid "Enter project en definition..."
+msgstr "Введіть визначення en проекту..."
+
+#: .\app_projects\forms.py:42
+msgid "Enter project uk definition..."
+msgstr "Введіть визначення uk проекту..."
 
 #: .\app_projects\models.py:12
 msgid "Planning"
@@ -295,13 +332,21 @@ msgstr "В процесі"
 msgid "Finished"
 msgstr "Завершено"
 
-#: .\app_projects\models.py:19
+#: .\app_projects\models.py:18
+msgid "definition"
+msgstr "визначення"
+
+#: .\app_projects\models.py:20
 msgid "status"
 msgstr "статус"
 
-#: .\app_projects\models.py:29
+#: .\app_projects\models.py:32
 msgid "Project"
 msgstr "Проект"
+
+#: .\app_projects\views.py:63 .\app_projects\views.py:64
+msgid "Project page"
+msgstr "Сторінка проекту"
 
 #: .\app_weather\views.py:38 .\app_weather\views.py:39
 msgid "Weather"
