@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils.translation import gettext_lazy as _
 from .models import Projects
 from .forms import ProjectForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required, permission_required
 
 def projects(request):
     
@@ -13,12 +14,34 @@ def projects(request):
                 'active': 'projects',
                 'projects': projects,
                 }
+    
     return render(request, 'projects/index.html', context)
 
-def project_page(request):
-    if 'id' in request:
-        project = Projects.objects.get(id=request.id)
+@permission_required('app_projects.delete_projects', login_url='login_user')
+def project_delete(request, id):
+    
+    project = Projects.objects.get(id=id)
+    
+    if request.method == 'GET':
+        
+        # TODO: add a question!!!!!!
+        # TODO: add messages.
+        
+        if not project == None:
+            
+            project.delete()
+        
+    return redirect('projects')
+
+@permission_required(['app_projects.add_projects', 'app_projects.change_projects'], login_url='login_user')
+def project_page(request, id=0):
+    
+    if id:
+       
+        project = Projects.objects.get(id=id)
+    
     else:
+       
         project = None   
     
     if request.method == 'POST':
@@ -29,8 +52,9 @@ def project_page(request):
         if project_form.is_valid():
             project_form.save()
             messages.success(request, _('The changes has been saved.'))
-    
+            
     else:
+        
         project_form = ProjectForm(instance=project)
     
     static_css_list = []
