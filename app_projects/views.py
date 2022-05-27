@@ -32,6 +32,7 @@ def project_delete(request, id):
         if not project == None:
             
             project.delete()
+            messages.success(request, _('The project has been removed.'))
         
     return redirect('projects')
 
@@ -94,12 +95,27 @@ def project_page(request, id=0):
         
         action = _('edit')
         data = request.POST
-        project_form = ProjectForm(data, instance=project)
+        post_action = request.POST['action']
+        project_form = ProjectForm(data, instance=project) 
         
-    
-        if project_form.is_valid():
-            project_form.save()
-            messages.success(request, _('The changes has been saved.'))
+        if post_action == 'save':
+           
+           if project_form.is_valid():
+                project_form.save()
+                messages.success(request, _('The changes has been saved.')) 
+            
+        elif post_action == 'save_and_finish':                      
+        
+            if project_form.is_valid():
+                project_form.save()
+                messages.success(request, _('The changes has been saved.'))
+        
+            return redirect('projects')
+        
+        elif post_action == 'finish':
+            
+            return redirect('projects')       
+                
             
     elif request.method == 'GET':        
         
