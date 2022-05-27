@@ -65,7 +65,7 @@ def project_copy(request, id=0):
             project.save()
         
         
-    project_form = ProjectForm(instance=project)
+        project_form = ProjectForm(instance=project)
         
     
     static_css_list = []
