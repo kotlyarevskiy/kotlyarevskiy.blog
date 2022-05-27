@@ -44,31 +44,6 @@
                                class="nav-link {% if active == 'projects' %}active{% endif %}"
                                href="{% url 'projects' %}">{% trans 'Projects' %}</a>
                         </li>                        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {% if active == 'projects' %}active{% endif %}"
-                               id="projects"
-                               role="button"
-                               data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                {% trans 'Projects' %}
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <!-- <li><a class="dropdown-item"
-                            {% comment %}
-                            href="{% url 'project_list_by_categories' %}"
-                            {% endcomment %}>by categories</a></li>
-                                                                              <li><a class="dropdown-item"
-                            {% comment %}
-                            href="{% url 'project_list_by_name' %}"
-                            {% endcomment %}>by name</a></li> -->
-                                <li>
-                                    <a class="dropdown-item" href="{% url 'weather' %}">Weather app</a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="{% url 'categories_and_areas' %}">Categories and areas</a>
-                              </li>                               
-                            </ul>
-                        </li>
                         <li class="nav-item">
                             <a id="contacts"
                                class="nav-link {% if active == 'contacts' %}active{% endif %}"
