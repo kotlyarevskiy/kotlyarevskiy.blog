@@ -63,6 +63,7 @@ def project_copy(request, id=0):
             action = _('copy')
             project.pk = None
             project.save()
+            messages.success(request, _('New project was created and saved.'))
         
         
         project_form = ProjectForm(instance=project)
