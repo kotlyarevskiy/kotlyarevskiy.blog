@@ -77,7 +77,7 @@
                     {{ project_form.media }}
                     <!-- project form BEGIN -->
                     <fieldset>
-                        <legend class="h5 mb-3 fw-normal">{% trans 'project details' %}{% if not action == None %} ({{ action }}){% endif %}:</legend>
+                        <legend class="h5 mb-3 fw-normal bg-secondary text-white px-2 py-1">{% trans 'project details' %}{% if not action == None %} ({{ action }}){% endif %}:</legend>
                         <p></p>
                         {% if project_form.error_messages %}
                         {% for error in project_form.non_field_errors %}
