@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-25 15:24+0300\n"
+"POT-Creation-Date: 2022-05-27 17:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,7 +100,7 @@ msgid "user settings:"
 msgstr "користувацькі налаштування:"
 
 #: .\_templates\auth\user_page.html:93
-#: .\_templates\projects\project_page.html:98
+#: .\_templates\projects\project_page.html:33
 msgid "Save changes"
 msgstr "Зберегти зміни"
 
@@ -108,21 +108,33 @@ msgstr "Зберегти зміни"
 msgid "Add project"
 msgstr "Додати проект"
 
-#: .\_templates\projects\index.html:45
+#: .\_templates\projects\index.html:63
 msgid "Edit"
 msgstr "Змінити"
 
-#: .\_templates\projects\index.html:54
+#: .\_templates\projects\index.html:70
+msgid "Copy"
+msgstr "Копіювати"
+
+#: .\_templates\projects\index.html:79
 msgid "Delete"
 msgstr "Вилучити"
 
-#: .\_templates\projects\project_page.html:29
+#: .\_templates\projects\project_page.html:34
+msgid "Save changes and finish"
+msgstr "Зберегти зміни та завершити"
+
+#: .\_templates\projects\project_page.html:35
+msgid "Finish"
+msgstr "Завершити"
+
+#: .\_templates\projects\project_page.html:43
 msgid "all"
 msgstr "всі"
 
-#: .\_templates\projects\project_page.html:64
-msgid "project details:"
-msgstr "деталі проекту:"
+#: .\_templates\projects\project_page.html:80
+msgid "project details"
+msgstr "деталі проекту"
 
 #: .\_templates\weather\index.html:15
 msgid "Submit"
@@ -300,7 +312,8 @@ msgstr "Дані профайлу користувача"
 msgid "User settings"
 msgstr "Користувацькі налаштування"
 
-#: .\app_auth\views.py:36 .\app_projects\views.py:54
+#: .\app_auth\views.py:36 .\app_projects\views.py:56
+#: .\app_projects\views.py:105 .\app_projects\views.py:111
 msgid "The changes has been saved."
 msgstr "Зміни було збережено."
 
@@ -344,9 +357,31 @@ msgstr "статус"
 msgid "Project"
 msgstr "Проект"
 
-#: .\app_projects\views.py:63 .\app_projects\views.py:64
+#: .\app_projects\views.py:35
+msgid "The project has been removed."
+msgstr "Проект було вилучено."
+
+#: .\app_projects\views.py:43 .\app_projects\views.py:64
+msgid "copy"
+msgstr "копіювання"
+
+#: .\app_projects\views.py:49 .\app_projects\views.py:96
+#: .\app_projects\views.py:126
+msgid "edit"
+msgstr "редагування"
+
+#: .\app_projects\views.py:67
+msgid "New project was created and saved."
+msgstr "Новий проект було створено та збережено."
+
+#: .\app_projects\views.py:76 .\app_projects\views.py:77
+#: .\app_projects\views.py:134 .\app_projects\views.py:135
 msgid "Project page"
 msgstr "Сторінка проекту"
+
+#: .\app_projects\views.py:90
+msgid "create"
+msgstr "створення"
 
 #: .\app_weather\views.py:38 .\app_weather\views.py:39
 msgid "Weather"
