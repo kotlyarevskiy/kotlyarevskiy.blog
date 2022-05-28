@@ -5,14 +5,28 @@ from .forms import ProjectForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
 
+def get_or_none(classmodel, **kwargs):
+    
+    try:
+        
+        return classmodel.objects.get(**kwargs)
+    
+    except classmodel.DoesNotExist:
+        
+        return None
+    
 def projects(request):
     
     projects = Projects.objects.all()
+  
+    static_css_list = []
+    static_js_list = ['js/controls_events.js']    
     
     context = { 'title': _('Projects'), 
-                'content_title': _('Projects'),
-                'active': 'projects',
-                'projects': projects,
+                'content_title':    _('Projects'),
+                'active':           'projects',
+                'projects':         projects,
+                'static_files':     {'css': static_css_list, 'js': static_js_list},
                 }
     
     return render(request, 'projects/index.html', context)
@@ -20,7 +34,7 @@ def projects(request):
 @permission_required('app_projects.delete_projects', login_url='login_user')
 def project_delete(request, id):
     
-    project = Projects.objects.get(id=id)
+    project = get_or_none(Projects, id=id)
     
     if request.method == 'GET':
         
@@ -29,7 +43,11 @@ def project_delete(request, id):
         # TODO: add a question!!!!!!
         # TODO: add messages.
         
-        if not project == None:
+        if project == None:
+            
+            messages.error(request, _('The project does not exist.'))
+            
+        else:
             
             project.delete()
             messages.success(request, _('The project has been removed.'))
@@ -39,7 +57,7 @@ def project_delete(request, id):
 @permission_required(['app_projects.add_projects', 'app_projects.change_projects'], login_url='login_user')
 def project_copy(request, id=0):
     
-    project = Projects.objects.get(id=id) if id else None
+    project = get_or_none(Projects, id=id) if id else None
     action = _('copy')    
     
     if request.method == 'POST':
@@ -61,7 +79,7 @@ def project_copy(request, id=0):
         
             if project_form.is_valid():
                 project_form.save()
-                messages.success(request, _('The changes has been saved.'))
+                messages.success(request, str(project) + " >> " + _('The changes has been saved.'))
         
             return redirect('projects')
         
@@ -100,7 +118,7 @@ def project_copy(request, id=0):
 @permission_required(['app_projects.add_projects', 'app_projects.change_projects'], login_url='login_user')
 def project_page(request, id=0):
     
-    project = Projects.objects.get(id=id) if id else None
+    project = get_or_none(Projects, id=id) if id else None
     action = _('create')    
     
     if request.method == 'POST':
@@ -122,7 +140,7 @@ def project_page(request, id=0):
         
             if project_form.is_valid():
                 project_form.save()
-                messages.success(request, _('The changes has been saved.'))
+                messages.success(request, str(project) + " >> " + _('The changes has been saved.'))
         
             return redirect('projects')
         
@@ -154,3 +172,4 @@ def project_page(request, id=0):
                 }
                      
     return render(request, 'projects/project_page.html', context)
+

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-27 17:10+0300\n"
+"POT-Creation-Date: 2022-05-28 21:00+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,40 +26,39 @@ msgstr ""
 msgid "About me"
 msgstr "Про мене"
 
-#: .\_templates\_base.html:45 .\_templates\_base.html:53
-#: .\app_projects\models.py:33 .\app_projects\views.py:12
-#: .\app_projects\views.py:13
+#: .\_templates\_base.html:45 .\app_projects\models.py:33
+#: .\app_projects\views.py:25 .\app_projects\views.py:26
 msgid "Projects"
 msgstr "Проекти"
 
-#: .\_templates\_base.html:77 .\kotlyarevskiy\views.py:20
+#: .\_templates\_base.html:50 .\kotlyarevskiy\views.py:20
 #: .\kotlyarevskiy\views.py:21
 msgid "Contacts"
 msgstr "Контакти"
 
-#: .\_templates\_base.html:103
+#: .\_templates\_base.html:76
 msgid "not authorized"
 msgstr "не авторизовано"
 
-#: .\_templates\_base.html:109 .\_templates\auth\user_page.html:27
+#: .\_templates\_base.html:82 .\_templates\auth\user_page.html:27
 #: .\app_auth\views.py:42 .\app_auth\views.py:43
 msgid "User page"
 msgstr "Сторінка користувача"
 
-#: .\_templates\_base.html:112
+#: .\_templates\_base.html:85
 msgid "Logout"
 msgstr "Вихід"
 
-#: .\_templates\_base.html:116 .\_templates\auth\registration.html:50
+#: .\_templates\_base.html:89 .\_templates\auth\registration.html:50
 #: .\app_auth\views.py:69 .\app_auth\views.py:70
 msgid "Login"
 msgstr "Вхід"
 
-#: .\_templates\_base.html:119 .\app_auth\views.py:109 .\app_auth\views.py:110
+#: .\_templates\_base.html:92 .\app_auth\views.py:109 .\app_auth\views.py:110
 msgid "Registration"
 msgstr "Реєстрація"
 
-#: .\_templates\_base.html:150 .\_templates\_base.html:152
+#: .\_templates\_base.html:123 .\_templates\_base.html:125
 msgid "Search"
 msgstr "Шукати"
 
@@ -108,15 +107,19 @@ msgstr "Зберегти зміни"
 msgid "Add project"
 msgstr "Додати проект"
 
-#: .\_templates\projects\index.html:63
+#: .\_templates\projects\index.html:57
+msgid "Project status"
+msgstr "Статус проекту"
+
+#: .\_templates\projects\index.html:69
 msgid "Edit"
 msgstr "Змінити"
 
-#: .\_templates\projects\index.html:70
+#: .\_templates\projects\index.html:76
 msgid "Copy"
 msgstr "Копіювати"
 
-#: .\_templates\projects\index.html:79
+#: .\_templates\projects\index.html:85
 msgid "Delete"
 msgstr "Вилучити"
 
@@ -312,8 +315,8 @@ msgstr "Дані профайлу користувача"
 msgid "User settings"
 msgstr "Користувацькі налаштування"
 
-#: .\app_auth\views.py:36 .\app_projects\views.py:56
-#: .\app_projects\views.py:105 .\app_projects\views.py:111
+#: .\app_auth\views.py:36 .\app_projects\views.py:76 .\app_projects\views.py:82
+#: .\app_projects\views.py:137 .\app_projects\views.py:143
 msgid "The changes has been saved."
 msgstr "Зміни було збережено."
 
@@ -357,29 +360,33 @@ msgstr "статус"
 msgid "Project"
 msgstr "Проект"
 
-#: .\app_projects\views.py:35
+#: .\app_projects\views.py:48
+msgid "The project does not exist."
+msgstr "Проект не існує."
+
+#: .\app_projects\views.py:53
 msgid "The project has been removed."
 msgstr "Проект було вилучено."
 
-#: .\app_projects\views.py:43 .\app_projects\views.py:64
+#: .\app_projects\views.py:61 .\app_projects\views.py:96
 msgid "copy"
 msgstr "копіювання"
 
-#: .\app_projects\views.py:49 .\app_projects\views.py:96
-#: .\app_projects\views.py:126
+#: .\app_projects\views.py:67 .\app_projects\views.py:128
+#: .\app_projects\views.py:158
 msgid "edit"
 msgstr "редагування"
 
-#: .\app_projects\views.py:67
+#: .\app_projects\views.py:99
 msgid "New project was created and saved."
 msgstr "Новий проект було створено та збережено."
 
-#: .\app_projects\views.py:76 .\app_projects\views.py:77
-#: .\app_projects\views.py:134 .\app_projects\views.py:135
+#: .\app_projects\views.py:108 .\app_projects\views.py:109
+#: .\app_projects\views.py:166 .\app_projects\views.py:167
 msgid "Project page"
 msgstr "Сторінка проекту"
 
-#: .\app_projects\views.py:90
+#: .\app_projects\views.py:122
 msgid "create"
 msgstr "створення"
 

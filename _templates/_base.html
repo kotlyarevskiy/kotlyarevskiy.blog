@@ -20,7 +20,7 @@
         {% for css_item in static_files.css %}
         <link rel="stylesheet" href="{% static '' %}{{ css_item }}">
         {% endfor %}
-
+        <script src="{% url 'javascript-catalog' %}"></script>
         <link rel="shortcut icon" href="{% static '' %}favicon.ico" type="image/x-icon">
         <link rel="icon" href="{% static '' %}favicon.ico" type="image/x-icon">       
 
