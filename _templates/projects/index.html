@@ -30,7 +30,7 @@
             <ul class="messages m-1">
                 {% for message in messages %}
                 <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
-                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}{% trans 'Important' %}: {% endif %}
                     {{ message }}
                 </li>
                 {% endfor %}
@@ -99,6 +99,33 @@
 
         </div>
     </div>
+
+
+    <div class="row">
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-end">
+              <li class="page-item {% if not projects.has_previous %}disabled{% endif %}">
+                <a class="page-link link-success" href="?page=1">{% trans 'first' %}</a>
+              </li>
+              <li class="page-item {% if not projects.has_previous %}disabled{% endif %}">
+                <a class="page-link link-success" href="?page={% if projects.has_previous %}{{ projects.previous_page_number }}{% else %}1{% endif %}">{% trans 'previous' %}</a>
+              </li>              
+
+              {% for i in pages_iterator %}
+              <li class="page-item {% if forloop.counter == projects.number %}disabled{% endif %}">
+                  <a class="page-link link-success" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a>
+                </li>
+              {% endfor %}
+              
+              <li class="page-item {% if not projects.has_next %}disabled{% endif %}">
+                <a class="page-link link-success" href="?page={% if projects.has_next %}{{ projects.next_page_number }}{% else %}{{ projects.paginator.num_pages }}{% endif %}">{% trans 'next' %}</a>
+              </li>
+              <li class="page-item {% if not projects.has_next %}disabled{% endif %}">
+                <a class="page-link link-success" href="?page={{ projects.paginator.num_pages }}">{% trans 'last' %}</a>
+              </li>
+            </ul>
+          </nav>
+    </div>  
     
 </div>
 

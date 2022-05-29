@@ -4,6 +4,7 @@ from .models import Projects
 from .forms import ProjectForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
+from django.core.paginator import Paginator
 
 def get_or_none(classmodel, **kwargs):
     
@@ -18,6 +19,11 @@ def get_or_none(classmodel, **kwargs):
 def projects(request):
     
     projects = Projects.objects.all()
+    paginator = Paginator(projects, 2)
+  
+    page_number = request.GET.get('page')
+    page_projects = paginator.get_page(page_number) 
+    pages_iterator = "i" * paginator.num_pages
   
     static_css_list = []
     static_js_list = ['js/controls_events.js']    
@@ -25,7 +31,8 @@ def projects(request):
     context = { 'title': _('Projects'), 
                 'content_title':    _('Projects'),
                 'active':           'projects',
-                'projects':         projects,
+                'projects':         page_projects,
+                'pages_iterator':   pages_iterator,
                 'static_files':     {'css': static_css_list, 'js': static_js_list},
                 }
     

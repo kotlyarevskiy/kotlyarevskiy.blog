@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-28 21:00+0300\n"
+"POT-Creation-Date: 2022-05-29 11:59+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgid "About me"
 msgstr "Про мене"
 
 #: .\_templates\_base.html:45 .\app_projects\models.py:33
-#: .\app_projects\views.py:25 .\app_projects\views.py:26
+#: .\app_projects\views.py:30 .\app_projects\views.py:31
 msgid "Projects"
 msgstr "Проекти"
 
@@ -107,6 +107,10 @@ msgstr "Зберегти зміни"
 msgid "Add project"
 msgstr "Додати проект"
 
+#: .\_templates\projects\index.html:33
+msgid "Important"
+msgstr "Важливо"
+
 #: .\_templates\projects\index.html:57
 msgid "Project status"
 msgstr "Статус проекту"
@@ -122,6 +126,30 @@ msgstr "Копіювати"
 #: .\_templates\projects\index.html:85
 msgid "Delete"
 msgstr "Вилучити"
+
+#: .\_templates\projects\index.html:106
+msgid "first"
+msgstr "перша"
+
+#: .\_templates\projects\index.html:107
+msgid "previous"
+msgstr "попередня"
+
+#: .\_templates\projects\index.html:111
+msgid "Page"
+msgstr "Сторінка"
+
+#: .\_templates\projects\index.html:111
+msgid "of"
+msgstr "з"
+
+#: .\_templates\projects\index.html:115
+msgid "next"
+msgstr "наступна"
+
+#: .\_templates\projects\index.html:116
+msgid "last"
+msgstr "остання"
 
 #: .\_templates\projects\project_page.html:34
 msgid "Save changes and finish"
@@ -315,8 +343,8 @@ msgstr "Дані профайлу користувача"
 msgid "User settings"
 msgstr "Користувацькі налаштування"
 
-#: .\app_auth\views.py:36 .\app_projects\views.py:76 .\app_projects\views.py:82
-#: .\app_projects\views.py:137 .\app_projects\views.py:143
+#: .\app_auth\views.py:36 .\app_projects\views.py:81 .\app_projects\views.py:87
+#: .\app_projects\views.py:142 .\app_projects\views.py:148
 msgid "The changes has been saved."
 msgstr "Зміни було збережено."
 
@@ -360,33 +388,33 @@ msgstr "статус"
 msgid "Project"
 msgstr "Проект"
 
-#: .\app_projects\views.py:48
+#: .\app_projects\views.py:53
 msgid "The project does not exist."
 msgstr "Проект не існує."
 
-#: .\app_projects\views.py:53
+#: .\app_projects\views.py:58
 msgid "The project has been removed."
 msgstr "Проект було вилучено."
 
-#: .\app_projects\views.py:61 .\app_projects\views.py:96
+#: .\app_projects\views.py:66 .\app_projects\views.py:101
 msgid "copy"
 msgstr "копіювання"
 
-#: .\app_projects\views.py:67 .\app_projects\views.py:128
-#: .\app_projects\views.py:158
+#: .\app_projects\views.py:72 .\app_projects\views.py:133
+#: .\app_projects\views.py:163
 msgid "edit"
 msgstr "редагування"
 
-#: .\app_projects\views.py:99
+#: .\app_projects\views.py:104
 msgid "New project was created and saved."
 msgstr "Новий проект було створено та збережено."
 
-#: .\app_projects\views.py:108 .\app_projects\views.py:109
-#: .\app_projects\views.py:166 .\app_projects\views.py:167
+#: .\app_projects\views.py:113 .\app_projects\views.py:114
+#: .\app_projects\views.py:171 .\app_projects\views.py:172
 msgid "Project page"
 msgstr "Сторінка проекту"
 
-#: .\app_projects\views.py:122
+#: .\app_projects\views.py:127
 msgid "create"
 msgstr "створення"
 
