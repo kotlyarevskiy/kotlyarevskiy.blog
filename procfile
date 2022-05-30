@@ -1,0 +1,1 @@
+web: gunicorn kotlyarevskiy.wsgi:application --log-file -
