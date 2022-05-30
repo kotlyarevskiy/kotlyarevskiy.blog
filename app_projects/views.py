@@ -19,7 +19,7 @@ def get_or_none(classmodel, **kwargs):
 def projects(request):
     
     projects = Projects.objects.all()
-    paginator = Paginator(projects, 2)
+    paginator = Paginator(projects, 4)
   
     page_number = request.GET.get('page')
     page_projects = paginator.get_page(page_number) 
@@ -47,17 +47,14 @@ def project_delete(request, id):
         
         # Delete
         
-        # TODO: add a question!!!!!!
-        # TODO: add messages.
-        
         if project == None:
             
-            messages.error(request, _('The project does not exist.'))
+            messages.error(request, "ID: " + str(id) + " >> " + _('The project does not exist.'))
             
         else:
             
             project.delete()
-            messages.success(request, _('The project has been removed.'))
+            messages.success(request, str(project) + " >> " + _('The project has been removed.'))
         
     return redirect('projects')
 
