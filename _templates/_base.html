@@ -78,6 +78,11 @@
                                     </h6>
                                 </li>
                                 {% if request.user.is_authenticated %}
+                                {% if request.user.is_staff %}
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'admin:index' %}">{% trans 'Admin panel' %}</a>
+                                </li>
+                                {% endif %}
                                 <li>
                                     <a class="dropdown-item" href="{% url 'user_page' %}">{% trans 'User page' %}</a>
                                 </li>
