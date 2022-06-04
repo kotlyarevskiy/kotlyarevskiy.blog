@@ -77,13 +77,13 @@ def project_copy(request, id=0):
            
            if project_form.is_valid():
                 project_form.save()
-                messages.success(request, _('The changes has been saved.')) 
+                messages.success(request, _('The changes have been saved.')) 
             
         elif post_action == 'save_and_finish':                      
         
             if project_form.is_valid():
                 project_form.save()
-                messages.success(request, str(project) + " >> " + _('The changes has been saved.'))
+                messages.success(request, str(project) + " >> " + _('The changes have been saved.'))
         
             return redirect('projects')
         
@@ -138,13 +138,13 @@ def project_page(request, id=0):
            
            if project_form.is_valid():
                 project_form.save()
-                messages.success(request, _('The changes has been saved.')) 
+                messages.success(request, _('The changes have been saved.')) 
             
         elif post_action == 'save_and_finish':                      
         
             if project_form.is_valid():
                 project_form.save()
-                messages.success(request, str(project) + " >> " + _('The changes has been saved.'))
+                messages.success(request, str(project) + " >> " + _('The changes have been saved.'))
         
             return redirect('projects')
         

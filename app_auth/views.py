@@ -33,7 +33,7 @@ def user_page(request):
         if profile_form.is_valid() and settings_form.is_valid():
             profile_form.save()
             settings_form.save()
-            messages.success(request, _('The changes has been saved.'))
+            messages.success(request, _('The changes have been saved.'))
     
     else:
         profile_form = UserProfileUpdateForm(instance=profile_instance)
