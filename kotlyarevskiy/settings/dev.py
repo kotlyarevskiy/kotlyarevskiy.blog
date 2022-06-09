@@ -15,7 +15,9 @@ ALLOWED_HOSTS = ['*']
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '_static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "_staticfiles")
 STATICFILES_DIRS = [
     BASE_DIR / "_static",
 ]
+
+CKEDITOR_UPLOAD_PATH = os.path.join(STATIC_ROOT, "ckeditor_uploads")
