@@ -1,12 +1,22 @@
+from distutils.debug import DEBUG
 from ntpath import join
 import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
+from dotenv import load_dotenv
+
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path)  # loads the configs from .env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'ddd'
+
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
+
+DEBUG = False
+
 
 # Application definition
 
