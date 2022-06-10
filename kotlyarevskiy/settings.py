@@ -2,12 +2,11 @@ from ntpath import join
 import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
-import dj_database_url
-from dotenv import load_dotenv, find_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = 'ddd'
 
 # Application definition
 
@@ -37,7 +36,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -74,11 +72,34 @@ WSGI_APPLICATION = 'kotlyarevskiy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-load_dotenv(find_dotenv())
+
 
 DATABASES = {
-            'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600, ssl_require=False)
-            }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'db.sqlite3',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
+
+ALLOWED_HOSTS = [   '127.0.0.1',
+                    'kotlyarevskiy-blog.heroku.com',
+                    'kotlyarevskiy.blog',]
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.9/howto/static-files/
+# Extra places for collectstatic to find static files.
+
+STATIC_URL = '_static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "_staticfiles")
+STATICFILES_DIRS = [
+    BASE_DIR / "_static",
+]
+
+CKEDITOR_UPLOAD_PATH = os.path.join(STATIC_ROOT, "ckeditor_uploads")
 
 
 # Password validation
