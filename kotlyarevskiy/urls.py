@@ -30,4 +30,6 @@ urlpatterns = [
     # Auth
     path('auth/', include('app_auth.urls')),
         
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+)
+
+urlpatterns  +=  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

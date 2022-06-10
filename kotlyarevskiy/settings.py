@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
-DEBUG = False
+DEBUG = str(os.getenv('DEBUG'))
 
 
 # Application definition
@@ -99,14 +99,26 @@ ALLOWED_HOSTS = [   '127.0.0.1',
                     'kotlyarevskiy-blog.heroku.com',
                     'kotlyarevskiy.blog',]
 
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 # Extra places for collectstatic to find static files.
 
-STATIC_URL = '_static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "_staticfiles")
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, '_staticfiles')
+STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = "/media/"
+
 STATICFILES_DIRS = [
-    BASE_DIR / "_static",
+    os.path.join(BASE_DIR, '_static'),
 ]
 
 CKEDITOR_UPLOAD_PATH = os.path.join(STATIC_ROOT, "ckeditor_uploads")
