@@ -4,6 +4,9 @@ import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
+import mimetypes
+
+mimetypes.add_type("text/javascript", ".js", True)
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(dotenv_path)  # loads the configs from .env
@@ -96,8 +99,11 @@ DATABASES = {
 }
 
 ALLOWED_HOSTS = [   '127.0.0.1',
+                    '192.168.0.10',
+                    'localhost',
                     'kotlyarevskiy-blog.heroku.com',
-                    'kotlyarevskiy.blog',]
+                    'kotlyarevskiy.blog',
+                    ]
 
 
 
