@@ -1,5 +1,6 @@
 from distutils.debug import DEBUG
 from ntpath import join
+import json
 import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
@@ -20,6 +21,11 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 DEBUG = str(os.getenv('DEBUG'))
 
+ALLOWED_HOSTS = [   '127.0.0.1',
+                    'localhost',
+                    '192.168.0.10',
+                    'kotlyarevskiy.blog',
+                    ]
 
 # Application definition
 
@@ -52,8 +58,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -101,10 +107,6 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
-
-
-ALLOWED_HOSTS = str(os.getenv('ALLOWED_HOSTS'))
-
 
 
 # Static files (CSS, JavaScript, Images)
