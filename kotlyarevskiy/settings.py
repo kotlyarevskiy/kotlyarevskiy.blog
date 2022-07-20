@@ -24,6 +24,7 @@ DEBUG = str(os.getenv('DEBUG'))
 ALLOWED_HOSTS = [   '127.0.0.1',
                     'localhost',
                     '192.168.0.10',
+                    '195.72.146.67',
                     'kotlyarevskiy.blog',
                     ]
 
